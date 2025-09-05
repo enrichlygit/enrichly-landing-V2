@@ -1,7 +1,6 @@
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { CheckCircle, ExternalLink } from "lucide-react";
-
 import { motion } from "motion/react";
 
 export function HeroSection() {
@@ -61,6 +60,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
+              {/* Book a Call */}
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button
                   size="lg"
@@ -76,13 +76,16 @@ export function HeroSection() {
                   </a>
                 </Button>
               </motion.div>
+
+              {/* Claim Free Leads (scrolls to Intake Form) */}
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button
+                  asChild
                   variant="outline"
                   size="lg"
                   className="border-enrichly-teal text-enrichly-navy hover:bg-enrichly-teal/10 px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all"
                 >
-                  Claim 15 Free Leads
+                  <a href="#intake">Claim 15 Free Leads</a>
                 </Button>
               </motion.div>
             </motion.div>
@@ -101,7 +104,7 @@ export function HeroSection() {
                 <div className="relative bg-red-50 rounded-lg p-4 border-2 border-red-200">
                   <div className="relative">
                     <ImageWithFallback
-                      src="https://images.unsplash.com/photo-1529078155058-5d716f45d604?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZXNzeSUyMHNwcmVhZHNoZWV0JTIwZGF0YSUyMHJvd3N8ZW58MXx8fHwxNzU2OTIzNDQyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                      src="https://images.unsplash.com/photo-1529078155058-5d716f45d604?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
                       alt="Messy spreadsheet data"
                       className="w-full h-40 object-cover rounded opacity-60"
                     />
@@ -141,7 +144,7 @@ export function HeroSection() {
                 <div className="relative bg-enrichly-teal/5 rounded-lg p-4 border-2 border-enrichly-teal/20">
                   <div className="relative">
                     <ImageWithFallback
-                      src="https://images.unsplash.com/photo-1575388902449-6bca946ad549?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGRhc2hib2FyZCUyMGludGVyZmFjZSUyMGFuYWx5dGljc3xlbnwxfHx8fDE3NTY5MjM0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                      src="https://images.unsplash.com/photo-1575388902449-6bca946ad549?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
                       alt="Clean outreach dashboard"
                       className="w-full h-40 object-cover rounded opacity-20"
                     />
