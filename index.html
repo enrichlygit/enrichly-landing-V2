@@ -1,36 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enrichly – Outreach-as-a-Service</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enrichly – Outreach-as-a-Service</title>
 
-    <!-- Calendly badge widget begin -->
-    <link
-      href="https://assets.calendly.com/assets/external/widget.css"
-      rel="stylesheet"
-    />
-    <script
-      src="https://assets.calendly.com/assets/external/widget.js"
-      type="text/javascript"
-      async
-    ></script>
-    <script type="text/javascript">
-      window.onload = function () {
-        Calendly.initBadgeWidget({
-          url: "https://calendly.com/oliver-enrichly/30min",
-          text: "Book A Call",
-          color: "#0069ff",
-          textColor: "#ffffff",
-          branding: true,
-        });
-      };
-    </script>
-    <!-- Calendly badge widget end -->
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  
+  <!-- Calendly badge widget begin -->
+  <link
+    href="https://assets.calendly.com/assets/external/widget.css"
+    rel="stylesheet"
+  />
+  <script
+    src="https://assets.calendly.com/assets/external/widget.js"
+    type="text/javascript"
+    async
+  ></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      Calendly.initBadgeWidget({
+        url: "https://calendly.com/oliver-enrichly/30min",
+        text: "Book A Call",
+        color: "#0069ff",
+        textColor: "#ffffff",
+        branding: true,
+      });
+    };
+  </script>
+  <!-- Calendly badge widget end -->
+</head>
