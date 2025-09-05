@@ -111,30 +111,38 @@ export function ProofSection() {
                 <ArrowRight className="w-6 h-6 text-enrichly-teal" />
               </div>
             </div>
+
             {/* Before Card */}
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-2 mb-4">
+              <CardContent className="p-6 space-y-4">
+                <div className="flex items-center space-x-2 mb-2">
                   <div className="w-3 h-3 bg-red-400 rounded-full"></div>
                   <h3 className="text-lg font-semibold text-gray-800">
                     Before: Raw CSV Input
                   </h3>
                 </div>
-                {/* Mock Google Sheets Interface */}
-                {/* ... existing before table code ... */}
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1529078155058-5d716f45d604?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZXNzeSUyMHNwcmVhZHNoZWV0JTIwZGF0YSUyMHJvd3N8ZW58MXx8fHwxNzU2OTIzNDQyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                  alt="Messy spreadsheet data"
+                  className="w-full h-48 object-cover rounded"
+                />
               </CardContent>
             </Card>
+
             {/* After Card */}
             <Card className="bg-white border-2 border-enrichly-teal/20 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-2 mb-4">
+              <CardContent className="p-6 space-y-4">
+                <div className="flex items-center space-x-2 mb-2">
                   <div className="w-3 h-3 bg-enrichly-teal rounded-full"></div>
                   <h3 className="text-lg font-semibold text-enrichly-navy">
                     After: Enriched Output
                   </h3>
                 </div>
-                {/* Mock CRM Interface */}
-                {/* ... existing after table code ... */}
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1575388902449-6bca946ad549?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGRhc2hib2FyZCUyMGludGVyZmFjZSUyMGFuYWx5dGljc3xlbnwxfHx8fDE3NTY5MjM0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                  alt="Clean outreach dashboard"
+                  className="w-full h-48 object-cover rounded"
+                />
               </CardContent>
             </Card>
           </div>
@@ -143,7 +151,6 @@ export function ProofSection() {
         {/* Testimonial */}
         <Card className="bg-gradient-to-br from-enrichly-navy to-enrichly-navy/90 border-0 shadow-2xl max-w-4xl mx-auto">
           <CardContent className="p-8 lg:p-12 text-center relative overflow-hidden">
-            {/* Background pattern */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-enrichly-teal/10 rounded-full -translate-y-16 translate-x-16"></div>
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-enrichly-teal/10 rounded-full translate-y-12 -translate-x-12"></div>
 
