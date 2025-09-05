@@ -190,5 +190,5 @@
 
 html {
   font-size: var(--font-size);
-  scroll-behavior: smooth; /* ✅ enables smooth scrolling */
+  scroll-behavior: smooth; /
 }
