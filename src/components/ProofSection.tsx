@@ -112,37 +112,226 @@ export function ProofSection() {
               </div>
             </div>
 
-            {/* Before Card */}
+            {/* Before: Raw CSV Input */}
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-6 space-y-4">
-                <div className="flex items-center space-x-2 mb-2">
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-2 mb-4">
                   <div className="w-3 h-3 bg-red-400 rounded-full"></div>
                   <h3 className="text-lg font-semibold text-gray-800">
                     Before: Raw CSV Input
                   </h3>
                 </div>
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1529078155058-5d716f45d604?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZXNzeSUyMHNwcmVhZHNoZWV0JTIwZGF0YSUyMHJvd3N8ZW58MXx8fHwxNzU2OTIzNDQyfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Messy spreadsheet data"
-                  className="w-full h-48 object-cover rounded"
-                />
+                <div className="bg-white rounded border overflow-hidden">
+                  <div className="bg-gray-50 px-2 py-1 border-b text-xs text-gray-600">
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">
+                      Target Companies - Outreach List
+                    </span>
+                  </div>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-xs">
+                      <thead>
+                        <tr className="bg-gray-100">
+                          <th className="px-2 py-1 text-left border-r border-gray-300 w-6 text-gray-400">
+                            #
+                          </th>
+                          <th className="px-2 py-1 text-left border-r border-gray-300">
+                            Company Name
+                          </th>
+                          <th className="px-2 py-1 text-left border-r border-gray-300">
+                            Contact Name
+                          </th>
+                          <th className="px-2 py-1 text-left border-r border-gray-300">
+                            Revenue ($M)
+                          </th>
+                          <th className="px-2 py-1 text-left border-r border-gray-300">
+                            Email
+                          </th>
+                          <th className="px-2 py-1 text-left">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b border-gray-200">
+                          <td className="px-2 py-1 border-r border-gray-300 text-gray-400">
+                            1
+                          </td>
+                          <td className="px-2 py-1 border-r border-gray-300">
+                            TechFlow Solutions
+                          </td>
+                          <td className="px-2 py-1 border-r border-gray-300">
+                            John Smith
+                          </td>
+                          <td className="px-2 py-1 border-r border-gray-300">
+                            47
+                          </td>
+                          <td className="px-2 py-1 border-r border-gray-300 bg-red-100"></td>
+                          <td className="px-2 py-1 bg-red-100 text-red-700">
+                            Missing
+                          </td>
+                        </tr>
+                        <tr className="border-b border-gray-200">
+                          <td className="px-2 py-1 border-r border-gray-300 text-gray-400">
+                            2
+                          </td>
+                          <td className="px-2 py-1 border-r border-gray-300">
+                            DataCore Industries
+                          </td>
+                          <td className="px-2 py-1 border-r border-gray-300">
+                            Sarah Chen
+                          </td>
+                          <td className="px-2 py-1 border-r border-gray-300">
+                            83
+                          </td>
+                          <td className="px-2 py-1 border-r border-gray-300 bg-red-100"></td>
+                          <td className="px-2 py-1 bg-red-100 text-red-700">
+                            Missing
+                          </td>
+                        </tr>
+                        <tr className="border-b border-gray-200">
+                          <td className="px-2 py-1 border-r border-gray-300 text-gray-400">
+                            3
+                          </td>
+                          <td className="px-2 py-1 border-r border-gray-300">
+                            CloudSync Corp
+                          </td>
+                          <td className="px-2 py-1 border-r border-gray-300">
+                            Mike Johnson
+                          </td>
+                          <td className="px-2 py-1 border-r border-gray-300">
+                            62
+                          </td>
+                          <td className="px-2 py-1 border-r border-gray-300 bg-red-100"></td>
+                          <td className="px-2 py-1 bg-red-100 text-red-700">
+                            Missing
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
-            {/* After Card */}
+            {/* After: Enriched Output */}
             <Card className="bg-white border-2 border-enrichly-teal/20 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-              <CardContent className="p-6 space-y-4">
-                <div className="flex items-center space-x-2 mb-2">
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-2 mb-4">
                   <div className="w-3 h-3 bg-enrichly-teal rounded-full"></div>
                   <h3 className="text-lg font-semibold text-enrichly-navy">
                     After: Enriched Output
                   </h3>
                 </div>
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1575388902449-6bca946ad549?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGRhc2hib2FyZCUyMGludGVyZmFjZSUyMGFuYWx5dGljc3xlbnwxfHx8fDE3NTY5MjM0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Clean outreach dashboard"
-                  className="w-full h-48 object-cover rounded"
-                />
+                <div className="bg-white rounded border overflow-hidden shadow-sm">
+                  <div className="bg-gray-50 px-4 py-2 border-b flex items-center justify-between">
+                    <div className="flex items-center space-x-4">
+                      <span className="text-sm font-medium text-gray-700">
+                        Active Campaign: Q1 Outreach
+                      </span>
+                      <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">
+                        Live
+                      </span>
+                    </div>
+                    <div className="text-xs text-gray-500">Updated 2 min ago</div>
+                  </div>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="bg-gray-50 border-b">
+                          <th className="px-4 py-2 text-left">Contact</th>
+                          <th className="px-4 py-2 text-left">Company</th>
+                          <th className="px-4 py-2 text-left">Email Status</th>
+                          <th className="px-4 py-2 text-left">Campaign</th>
+                          <th className="px-4 py-2 text-left">Response</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b hover:bg-gray-50">
+                          <td className="px-4 py-2">
+                            <div className="flex items-center space-x-2">
+                              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xs font-medium">
+                                JS
+                              </div>
+                              <div>
+                                <div className="font-medium">John Smith</div>
+                                <div className="text-xs text-gray-500">
+                                  john@techcorp.com
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="px-4 py-2">
+                            <div>TechFlow Solutions</div>
+                            <div className="text-xs text-gray-500">
+                              $47M Revenue
+                            </div>
+                          </td>
+                          <td className="px-4 py-2">
+                            <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">
+                              Sent
+                            </span>
+                          </td>
+                          <td className="px-4 py-2">
+                            <div className="text-xs">Sequence 1/3</div>
+                            <div className="text-xs text-gray-500">
+                              Follow-up in 2 days
+                            </div>
+                          </td>
+                          <td className="px-4 py-2">
+                            <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">
+                              Opened
+                            </span>
+                          </td>
+                        </tr>
+                        <tr className="border-b hover:bg-gray-50">
+                          <td className="px-4 py-2">
+                            <div className="flex items-center space-x-2">
+                              <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-xs font-medium">
+                                SC
+                              </div>
+                              <div>
+                                <div className="font-medium">Sarah Chen</div>
+                                <div className="text-xs text-gray-500">
+                                  sarah@datacore.com
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="px-4 py-2">
+                            <div>DataCore Industries</div>
+                            <div className="text-xs text-gray-500">
+                              $83M Revenue
+                            </div>
+                          </td>
+                          <td className="px-4 py-2">
+                            <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">
+                              Sent
+                            </span>
+                          </td>
+                          <td className="px-4 py-2">
+                            <div className="text-xs">Sequence 2/3</div>
+                            <div className="text-xs text-gray-500">
+                              Next: Tomorrow
+                            </div>
+                          </td>
+                          <td className="px-4 py-2">
+                            <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">
+                              Replied
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="bg-enrichly-teal/5 px-4 py-2 border-t">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-enrichly-teal font-medium">
+                        ✓ AI Personalization Active
+                      </span>
+                      <span className="text-gray-600">
+                        Reply Rate: 28% | Open Rate: 67%
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
