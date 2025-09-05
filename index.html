@@ -4,17 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enrichly – Outreach-as-a-Service</title>
-    <!-- Calendly script should go here -->
+
+    <!-- Calendly badge widget begin -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
     <script
-      type="text/javascript"
-      <!-- Calendly badge widget begin -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/oliver-enrichly/30min', text: 'Book A Call', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
-<!-- Calendly badge widget end -->
       src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
       async
     ></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        Calendly.initBadgeWidget({
+          url: "https://calendly.com/oliver-enrichly/30min",
+          text: "Book A Call",
+          color: "#0069ff",
+          textColor: "#ffffff",
+          branding: true,
+        });
+      };
+    </script>
+    <!-- Calendly badge widget end -->
   </head>
   <body>
     <div id="root"></div>
