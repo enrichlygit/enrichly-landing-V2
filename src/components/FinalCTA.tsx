@@ -8,22 +8,43 @@ export function FinalCTA() {
           Get your first enriched list this week.
         </h2>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Join the search funds and M&A teams who trust Enrichly to accelerate their deal flow.
+          Join the search funds and M&amp;A teams who trust Enrichly to accelerate their deal flow.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button 
-            size="lg" 
+          {/* Book a Call button with Calendly popup */}
+          <Button
+            size="lg"
             className="bg-enrichly-navy hover:bg-enrichly-navy/90 text-white px-10 py-4 text-lg"
+            asChild
           >
-            Book a Call
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                (window as any).Calendly.initPopupWidget({
+                  url: "https://calendly.com/oliver-enrichly/30min",
+                });
+              }}
+            >
+              Book a Call
+            </a>
           </Button>
-          <Button 
-            variant="outline" 
-            size="lg" 
+
+          {/* See Sample List button (replace URL when ready) */}
+          <Button
+            variant="outline"
+            size="lg"
             className="border-enrichly-teal text-enrichly-navy hover:bg-enrichly-teal/10 px-10 py-4 text-lg"
+            asChild
           >
-            See Sample List
+            <a
+              href="https://your-sample-link.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See Sample List
+            </a>
           </Button>
         </div>
       </div>
