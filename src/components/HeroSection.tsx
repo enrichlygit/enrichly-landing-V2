@@ -65,8 +65,15 @@ export function HeroSection() {
                 <Button
                   size="lg"
                   className="bg-enrichly-navy hover:bg-enrichly-navy/90 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-shadow"
+                  asChild
                 >
-                  Book a Call
+                  <a
+                    href="https://calendly.com/oliver-enrichly/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Book a Call
+                  </a>
                 </Button>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -98,6 +105,7 @@ export function HeroSection() {
                       alt="Messy spreadsheet data"
                       className="w-full h-40 object-cover rounded opacity-60"
                     />
+                    {/* Overlay */}
                     <div className="absolute inset-0 bg-white/90 p-3 rounded text-xs">
                       <div className="space-y-1.5">
                         <div className="grid grid-cols-2 gap-1 text-gray-500">
@@ -137,6 +145,7 @@ export function HeroSection() {
                       alt="Clean outreach dashboard"
                       className="w-full h-40 object-cover rounded opacity-20"
                     />
+                    {/* Overlay */}
                     <div className="absolute inset-0 bg-white/95 p-3 rounded text-xs">
                       <div className="space-y-1.5">
                         <div className="grid grid-cols-2 gap-1 items-center">
