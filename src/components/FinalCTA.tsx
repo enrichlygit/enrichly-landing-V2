@@ -12,49 +12,36 @@ export function FinalCTA() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          {/* Book a Call button with Calendly popup */}
-        <Button
-  size="lg"
-  className="bg-enrichly-navy hover:bg-enrichly-navy/90 text-white px-10 py-4 text-lg"
-  asChild
->
-  <a
-    href="#"
-    onClick={(e) => {
-      e.preventDefault();
-      if ((window as any).Calendly) {
-        (window as any).Calendly.initPopupWidget({
-          url: "https://calendly.com/oliver-enrichly/30min",
-        });
-      } else {
-        console.error("Calendly script not loaded yet");
-      }
-    }}
-  >
-    Book a Call
-  </a>
-<Button
-  size="lg"
-  className="bg-enrichly-navy hover:bg-enrichly-navy/90 text-white px-10 py-4 text-lg"
-  asChild
->
-  <a
-    href="#"
-    onClick={(e) => {
-      e.preventDefault();
-      if ((window as any).Calendly) {
-        (window as any).Calendly.initPopupWidget({
-          url: "https://calendly.com/oliver-enrichly/30min",
-        });
-      } else {
-        console.error("Calendly not loaded yet");
-      }
-    }}
-  >
-    Book a Call
-  </a>
-</Button>
+          {/* Book a Call button goes to Calendly link */}
+          <Button
+            size="lg"
+            className="bg-enrichly-navy hover:bg-enrichly-navy/90 text-white px-10 py-4 text-lg"
+            asChild
+          >
+            <a
+              href="https://calendly.com/oliver-enrichly/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book a Call
+            </a>
+          </Button>
 
+          {/* See Sample List button */}
+          <Button
+            variant="outline"
+            size="lg"
+            className="border-enrichly-teal text-enrichly-navy hover:bg-enrichly-teal/10 px-10 py-4 text-lg"
+            asChild
+          >
+            <a
+              href="https://your-sample-link.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See Sample List
+            </a>
+          </Button>
         </div>
       </div>
     </section>
